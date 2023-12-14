@@ -11,6 +11,7 @@ public class Meeting extends Task {
         this.project = project; //заполнение своих полей
         this.start = start; //заполнение своих полей
     }
+
     public String getTopic() {
         return topic;
     }
