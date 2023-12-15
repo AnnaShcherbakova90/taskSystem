@@ -93,18 +93,10 @@ public class TodosTest {
         todos.add(meeting);
         todos.add(epic);
 
-        Task[] expectedTitle = {simpleTask};
-        Task[] actualTitle = todos.search("Позвонить");
+        Task[] expectedTasks = {simpleTask, meeting, epic};
+        Task[] actualTasks = todos.search("о");
 
-        Task[] expectedProject = {meeting};
-        Task[] actualProject = todos.search("НетоБанк");
-
-        Task[] expectedSubtasks = {epic};
-        Task[] actualSubtasks = todos.search("Хлеб");
-
-        Assertions.assertArrayEquals(expectedTitle, actualTitle);
-        Assertions.assertArrayEquals(expectedProject, actualProject);
-        Assertions.assertArrayEquals(expectedSubtasks, actualSubtasks);
+        Assertions.assertArrayEquals(expectedTasks, actualTasks);
     }
 
     @Test
